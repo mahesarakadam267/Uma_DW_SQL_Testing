@@ -1,0 +1,30 @@
+erDiagram
+  CUST_PROFILE {
+        string Address
+        int BranchID
+        int CustomerID
+        date DateOfBirth
+        string Email
+        string FirstName
+        string LastName
+        string PhoneNumber
+    }
+    EMPLOYEES {
+        int BranchID
+        int EmployeeID
+        string FirstName
+        date HireDate
+        string LastName
+        int ManagerID
+    }
+    BRANCHES {
+        string Address
+        int BranchID
+        string BranchName
+        string City
+        string Status
+        string Zipcode
+    }
+    EMPLOYEES }o--|| BRANCHES : works_at
+    CUST_PROFILE }o--|| BRANCHES : located_in
+    EMPLOYEES ||--o{ EMPLOYEES : manages
